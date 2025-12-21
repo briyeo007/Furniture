@@ -1,0 +1,31 @@
+import "./About.scss";
+
+export default function About() {
+  return (
+    <section className="about">
+      <div className="about-inner">
+
+        {/* LEFT IMAGE */}
+        <div className="about-image">
+          <img src="/images/about.png" alt="Living Spaces Store" />
+        </div>
+
+        {/* RIGHT CONTENT */}
+        <div className="about-content">
+          <h3>About Us</h3>
+          <p>
+            Living Spaces is expanding nationwide to offer guests an easier,
+            more convenient shopping experience with a huge selection and
+            guaranteed low prices.
+            <br /><br />
+            Plus, enjoy same-day delivery—shop online or visit a showroom and
+            get your new furniture fast.
+          </p>
+
+          <a href="#" className="about-btn">View More</a>
+        </div>
+
+      </div>
+    </section>
+  );
+}
