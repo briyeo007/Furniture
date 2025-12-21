@@ -1,5 +1,7 @@
 import "./Community.scss";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Community() {
   return (
     <section className="community">
@@ -21,7 +23,10 @@ export default function Community() {
 
         {/* RIGHT IMAGE */}
         <div className="community-image">
-          <img src="/images/community.png" alt="Community" />
+          <img
+            src={`${BASE}images/community.png`}
+            alt="Community"
+          />
         </div>
       </div>
     </section>

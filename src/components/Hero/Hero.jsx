@@ -1,15 +1,20 @@
 import "./Hero.scss";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Hero() {
   return (
     <section className="hero">
       {/* 배경 이미지 */}
-      <img className="hero-bg" src="/images/hero.png" alt="" aria-hidden="true" />
+      <img
+        className="hero-bg"
+        src={`${BASE}images/hero.png`}
+        alt=""
+        aria-hidden="true"
+      />
 
-      {/* 어두운 오버레이 */}
       <div className="hero-overlay" />
 
-      {/* 중앙 카피 */}
       <div className="hero-content">
         <h2 className="hero-title">Christmas Sales</h2>
         <p className="hero-sub">~WEEKEND DEALS~</p>
@@ -18,7 +23,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* 하단 딜 바 */}
       <div className="hero-deals">
         <a className="deal" href="#">
           <span className="deal-title">WINTER DEALS</span>

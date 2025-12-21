@@ -1,5 +1,7 @@
 import "./Header.scss";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function Header() {
   return (
     <header className="ls-header">
@@ -7,20 +9,20 @@ export default function Header() {
 
         {/* LOGO */}
         <a href="#" className="logo-link">
-          <img src="/images/logo.png" alt="Living Spaces Logo" />
+          <img src={`${BASE}images/logo.png`} alt="Living Spaces Logo" />
         </a>
 
-        {/* RIGHT ICONS (둘 다 이미지 링크) */}
+        {/* RIGHT ICONS */}
         <div className="right">
 
-          {/* 로그인 이미지 */}
+          {/* 로그인 */}
           <a href="#" className="icon-link">
-            <img src="/images/icon-user.png" alt="login" />
+            <img src={`${BASE}images/icon-user.png`} alt="login" />
           </a>
 
-          {/* 햄버거 이미지 */}
+          {/* 햄버거 */}
           <a href="#" className="icon-link">
-            <img src="/images/icon-menu.png" alt="menu" />
+            <img src={`${BASE}images/icon-menu.png`} alt="menu" />
           </a>
 
         </div>

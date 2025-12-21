@@ -1,5 +1,7 @@
 import "./ShopByStyle.scss";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function ShopByStyle() {
   return (
     <section className="shop-style">
@@ -12,7 +14,10 @@ export default function ShopByStyle() {
             <span className="style-card__label">Modern Traditional</span>
 
             <div className="style-card__img">
-              <img src="/images/style-modern-traditional.png" alt="Modern Traditional" />
+              <img
+                src={`${BASE}images/style-modern-traditional.png`}
+                alt="Modern Traditional"
+              />
             </div>
 
             <p className="style-card__desc">
@@ -25,13 +30,16 @@ export default function ShopByStyle() {
             </a>
           </article>
 
-          {/* 2 (가운데: 슬라이드처럼 보이게 + dots) */}
+          {/* 2 (센터) */}
           <div className="style-slider">
             <article className="style-card style-card--center">
               <span className="style-card__label">Japandi</span>
 
               <div className="style-card__img">
-                <img src="/images/style-japandi.png" alt="Japandi" />
+                <img
+                  src={`${BASE}images/style-japandi.png`}
+                  alt="Japandi"
+                />
               </div>
 
               <p className="style-card__desc">
@@ -57,7 +65,10 @@ export default function ShopByStyle() {
             <span className="style-card__label">Mid-Century</span>
 
             <div className="style-card__img">
-              <img src="/images/style-midcentury.png" alt="Mid-Century" />
+              <img
+                src={`${BASE}images/style-midcentury.png`}
+                alt="Mid-Century"
+              />
             </div>
 
             <p className="style-card__desc">
@@ -75,7 +86,10 @@ export default function ShopByStyle() {
             <span className="style-card__label">Community</span>
 
             <div className="style-card__img">
-              <img src="/images/style-crypton.png" alt="Community" />
+              <img
+                src={`${BASE}images/style-crypton.png`}
+                alt="Community"
+              />
             </div>
 
             <p className="style-card__desc">

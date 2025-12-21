@@ -1,5 +1,7 @@
 import "./About.scss";
 
+const BASE = import.meta.env.BASE_URL;
+
 export default function About() {
   return (
     <section className="about">
@@ -7,7 +9,10 @@ export default function About() {
 
         {/* LEFT IMAGE */}
         <div className="about-image">
-          <img src="/images/about.png" alt="Living Spaces Store" />
+          <img
+            src={`${BASE}images/about.png`}
+            alt="Living Spaces Store"
+          />
         </div>
 
         {/* RIGHT CONTENT */}
