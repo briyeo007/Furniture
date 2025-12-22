@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  padding: 120px 0; // 위아래 여백
+  padding: 150px 0; // 위아래 여백
   background: #fff;
 
   .about-inner {
@@ -32,9 +32,9 @@
     z-index: 2;
 
     h3 {
-      font-size: 28px;
-      font-weight: 500;
+      font-size: 34px;
       margin-bottom: 20px;
+      font-family: "Playfair Display";
     }
 
     p {
@@ -42,6 +42,7 @@
       line-height: 1.7;
       opacity: 0.95;
       margin-bottom: 32px;
+      font-family: "Inter";
     }
   }
 

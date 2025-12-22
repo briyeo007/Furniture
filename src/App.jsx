@@ -5,6 +5,9 @@ import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Community from "./components/Community/Community";
 import ShopByStyle from "./components/ShopByStyle/ShopByStyle";
+import FeatureCollection from "./components/FeatureCollection/FeatureCollection";
+import OurHome from "./components/OurHome/OurHome";
+import Careers from "./components/Careers/Careers";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <About />
       <Community />
       <ShopByStyle />
+      <FeatureCollection />
+      <OurHome />
+      <Careers />
     </>
   );
 }

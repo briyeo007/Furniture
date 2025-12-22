@@ -1,6 +1,6 @@
 .community {
   width: 100%;
-  padding: 120px 0;
+  padding-bottom: 150px;
   background: #fff;
 
   .community-inner {
@@ -18,19 +18,20 @@
     padding: 56px 48px;
     margin-right: -120px; // 이미지 위로 겹치게 (About이랑 반대)
     z-index: 2;
-    text-align: center;
+    text-align: right;
 
     h3 {
-      font-size: 28px;
-      font-weight: 500;
-      margin-bottom: 18px;
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-family: "Playfair Display";
     }
 
     p {
       font-size: 14px;
       line-height: 1.7;
       opacity: 0.95;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
+      font-family: "Inter";
     }
   }
 

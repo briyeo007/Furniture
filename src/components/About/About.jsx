@@ -22,7 +22,6 @@ export default function About() {
             Living Spaces is expanding nationwide to offer guests an easier,
             more convenient shopping experience with a huge selection and
             guaranteed low prices.
-            <br /><br />
             Plus, enjoy same-day delivery—shop online or visit a showroom and
             get your new furniture fast.
           </p>
