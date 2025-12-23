@@ -1,52 +1,47 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 875px; // 스샷 느낌. 필요하면 560~640으로 조정
+  height: 649px;
   overflow: hidden;
-  background: #000;
   padding: 150px 0;
+  background: url("/images/hero.png") center / cover no-repeat;
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.02);
-  }
-
+  /* ❗ overlay는 진짜 "배경톤다운"만 */
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.25); // 전체 톤 다운
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
   }
 
-  .hero-content {
-    position: absolute;
-    inset: 0;
+  /* ✅ 텍스트/슬라이더가 overlay 안에 있어도 클릭/드래그 가능하게 */
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    pointer-events: auto; /* ⭐ 이게 핵심 */
+    width: 100%;
+
     display: grid;
     place-items: center;
     text-align: center;
     color: #fff;
     padding: 0 24px;
-    z-index: 2;
-    transform: translateY(-10px); // 살짝 위로
+    align-content: start;
   }
 
   .hero-title {
     font-family: "Italianno";
-    font-size: 130px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+    font-size: 60px;
     line-height: 1;
+    padding-top: 150px;
   }
 
   .hero-sub {
-    margin-top: 20px;
-    font-size: 30px;
-    letter-spacing: 0.22em;
+    font-size: 18px;
     opacity: 0.95;
     font-family: "Inter";
+    font-weight: 400;
   }
 
   .hero-cta {
@@ -54,54 +49,79 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 34px;
+    height: 50px;
+    width: 200px;
     padding: 0 18px;
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: #323232;
     color: #fff;
     font-size: 12px;
     letter-spacing: 0.06em;
-    background: rgba(0, 0, 0, 0.25);
+    font-family: "Inter";
+    font-size: 17px;
+    font-weight: 400;
   }
 
-  /* 하단 딜 바 */
   .hero-deals {
     position: absolute;
-    left: 50%;
+    left: 0;
     bottom: 0;
-    transform: translateX(-50%);
     width: 100%;
-    height: 100px;
+    z-index: 3;
+    top: 135%;
+  }
 
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
+  .deals-track {
+    display: flex;
+    height: 213px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: smooth;
+
+    touch-action: pan-x;  /* ⭐ 드래그/스와이프 핵심 */
+    pointer-events: auto; /* ⭐ overlay 때문에 씹힐 때 방지 */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .deals-track.is-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+  }
+
+  .deal {
+    position: relative;
+    flex: 0 0 calc(100% - 32px);
+    scroll-snap-align: center;
+    
+    height: 213px;
+    padding: 10px 18px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    font-family: "Inter";
+    text-align: center;
 
     background: rgba(0, 0, 0, 0.35);
     border-radius: 4px;
     backdrop-filter: blur(2px);
 
-    z-index: 3;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
-  .deal {
-    height: 100%;
-    padding: 10px 18px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    align-items: center;
-    font-family: "Inter";
-  }
-
-  .deal-title {
-    font-size: 22px;
-  }
-
-  .deal-desc {
-    font-size: 18px;
-  }
+  .deal-title { font-size: 22px; }
+  .deal-desc { font-size: 18px; }
 
   .deal-icon {
     position: absolute;
@@ -111,9 +131,23 @@
     opacity: 0.9;
   }
 
-  .deal-divider {
-    width: 1px;
-    height: 46px;
-    background: rgba(255, 255, 255, 0.25);
+  .deal-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: none;
+    gap: 6px;
   }
+
+  .deal-dots.active { display: flex; }
+
+  .dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  .dot.active { background: #fff; }
 }

@@ -8,6 +8,7 @@ import ShopByStyle from "./components/ShopByStyle/ShopByStyle";
 import FeatureCollection from "./components/FeatureCollection/FeatureCollection";
 import OurHome from "./components/OurHome/OurHome";
 import Careers from "./components/Careers/Careers";
+import ShopByCollection from "./components/ShopByCollection/ShopByCollection";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <FeatureCollection />
       <OurHome />
       <Careers />
+      <ShopByCollection />
     </>
   );
 }
