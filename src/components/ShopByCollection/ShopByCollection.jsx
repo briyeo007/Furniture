@@ -3,9 +3,10 @@ import "./ShopByCollection.scss";
 const BASE = import.meta.env.BASE_URL;
 
 const collections = [
-  { name: "Dwen", sub: "living spaces", img: `${BASE}images/dean.png` },
+  { name: "Dean", sub: "living spaces", img: `${BASE}images/dean.png` },
   { name: "Jolene", sub: "Collection", img: `${BASE}images/jolene.png` },
   { name: "CRYPTON", sub: "Home Fabric", img: `${BASE}images/crypton.png` },
+  { name: "Alton", sub: "for living spaces", img: `${BASE}images/alton.png` },
 ];
 
 export default function ShopByCollection() {
