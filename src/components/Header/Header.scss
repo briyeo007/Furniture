@@ -1,43 +1,33 @@
-.ls-header {
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: transparent;
 
-  .inner {
-    max-width: 1920px; // 형님이 작업 중인 기준
-    height: 80px;
-    margin: 0 auto;
-    padding: 0 32px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &__logo {
+    font-family: var(--font-inter);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: #fff;
   }
 
-   .logo-link img {
-    width: 324px;
-    height: 20px;
-    display: block;
-    object-fit: contain;
-  }
-
-  .right {
+  &__menu {
     display: flex;
-    align-items: center;
-    gap: 59px; // 사람이랑 햄버거 사이 59px
-  }
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
 
-  /* 공통 아이콘 이미지 링크 */
-  .icon-link {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    img {
-      width: 45px;
-      height: 40px;
-      display: block;
-      object-fit: contain;
+    span {
+      width: 20px;
+      height: 1px;
+      background: #fff;
     }
   }
 }

@@ -1,0 +1,49 @@
+.support {
+  position: relative;
+  min-height: 300px;
+  margin-top: 60px;
+  background: url("/images/support.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
+  &__overlay {
+    position: relative;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-family: var(--font-playfair);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 90%;
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    font-family: var(--font-istok);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    font-family: var(--font-inter);
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+  }
+}

@@ -1,106 +1,63 @@
+import { useRef, useState } from "react";
 import "./ShopByStyle.scss";
 
 const BASE = import.meta.env.BASE_URL;
 
+const slides = [
+  {
+    label: "Modern Traditional",
+    desc: "Austen offers a clean, timeless blend of modern and traditional style for a comfortable, beautiful home.",
+    img: `${BASE}images/style-modern-traditional.png`,
+  },
+  {
+    label: "Mid-Century",
+    desc: "Mid-century style mixes clean lines, warm woods, and simple geometric forms.",
+    img: `${BASE}images/style-midcentury.png`,
+  },
+  {
+    label: "Japandi",
+    desc: "A blend of Japanese and Scandinavian aesthetics featuring minimalism and natural materials.",
+    img: `${BASE}images/style-japandi.png`,
+  },
+];
+
 export default function ShopByStyle() {
+  const trackRef = useRef(null);
+  const [active, setActive] = useState(0);
+
+  const onScroll = () => {
+    const t = trackRef.current;
+    if (!t || !t.children?.length) return;
+    const slideW = t.children[0].getBoundingClientRect().width;
+    const idx = Math.round(t.scrollLeft / slideW);
+    setActive(Math.max(0, Math.min(slides.length - 1, idx)));
+  };
+
   return (
-    <section className="shop-style">
-      <div className="shop-style__inner">
-        <h2 className="shop-style__title">Shop By Style</h2>
+    <section className="sbs">
+      <h2 className="sbs__title">Shop By Style</h2>
 
-        <div className="shop-style__grid">
-          {/* 1 */}
-          <article className="style-card">
-            <span className="style-card__label">Modern Traditional</span>
-
-            <div className="style-card__img">
-              <img
-                src={`${BASE}images/style-modern-traditional.png`}
-                alt="Modern Traditional"
-              />
-            </div>
-
-            <p className="style-card__desc">
-              Austen offers a clean, timeless blend of modern and traditional style
-              for a comfortable, beautiful home.
-            </p>
-
-            <a className="style-card__link" href="#">
-              Shop Now
-            </a>
-          </article>
-
-          {/* 2 (센터) */}
-          <div className="style-slider">
-            <article className="style-card style-card--center">
-              <span className="style-card__label">Japandi</span>
-
-              <div className="style-card__img">
-                <img
-                  src={`${BASE}images/style-japandi.png`}
-                  alt="Japandi"
-                />
+      <div className="sbs__slider" ref={trackRef} onScroll={onScroll}>
+        {slides.map((slide, i) => (
+          <div className="sbs__slide" key={i}>
+            <span className="sbs__label">{slide.label}</span>
+            <div className="sbs__main">
+              <div className="sbs__image">
+                <img src={slide.img} alt={slide.label} />
               </div>
-
-              <p className="style-card__desc">
-                Mariko blends Scandinavian and Japanese minimalism for a clean,
-                natural, functional look.
-              </p>
-
-              <a className="style-card__link" href="#">
-                Shop Now
-              </a>
-            </article>
-
-            <div className="style-slider__dots" aria-hidden="true">
-              <span className="dot"></span>
-              <span className="dot active"></span>
-              <span className="dot"></span>
-              <span className="dot"></span>
+              <div className="sbs__content">
+                <p className="sbs__desc">{slide.desc}</p>
+                <a href="#" className="sbs__link">Shop Now</a>
+              </div>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* 3 */}
-          <article className="style-card">
-            <span className="style-card__label">Mid-Century</span>
-
-            <div className="style-card__img">
-              <img
-                src={`${BASE}images/style-midcentury.png`}
-                alt="Mid-Century"
-              />
-            </div>
-
-            <p className="style-card__desc">
-              Mid-century style mixes clean lines, warm woods, and simple geometric
-              forms to create a timeless, modern look that feels both retro and fresh.
-            </p>
-
-            <a className="style-card__link" href="#">
-              Shop Now
-            </a>
-          </article>
-
-          {/* 4 */}
-          <article className="style-card">
-            <span className="style-card__label">Community</span>
-
-            <div className="style-card__img">
-              <img
-                src={`${BASE}images/style-crypton.png`}
-                alt="Community"
-              />
-            </div>
-
-            <p className="style-card__desc">
-              Helping others establish a feeling of home is central to what we do.
-            </p>
-
-            <a className="style-card__link" href="#">
-              Shop Now
-            </a>
-          </article>
-        </div>
+      <div className="sbs__dots">
+        {slides.map((_, i) => (
+          <span key={i} className={`sbs__dot ${active === i ? "sbs__dot--active" : ""}`} />
+        ))}
       </div>
     </section>
   );

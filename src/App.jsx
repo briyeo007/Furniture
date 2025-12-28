@@ -9,6 +9,8 @@ import FeatureCollection from "./components/FeatureCollection/FeatureCollection"
 import OurHome from "./components/OurHome/OurHome";
 import Careers from "./components/Careers/Careers";
 import ShopByCollection from "./components/ShopByCollection/ShopByCollection";
+import Support from "./components/Support/Support";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <OurHome />
       <Careers />
       <ShopByCollection />
+      <Support />
+      <Footer />
     </>
   );
 }

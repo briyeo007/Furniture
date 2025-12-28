@@ -1,105 +1,104 @@
-.shop-style {
-  padding-bottom: 150px;
-}
+.sbs {
+  padding: var(--section-spacing) 0 60px;
+  background: #fdf8f6;
 
-.shop-style__inner {
-  width: 1200px;
-  margin: 0 auto;
-}
+  // Title same as OurHome
+  &__title {
+    font-family: var(--font-playfair);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    line-height: 1.3;
+  }
 
-/* 제목 ↔ 카드 간격 70px */
-.shop-style__title {
-  font-size: 40px;
-  margin-bottom: 70px;
-  font-family: "Playfair Display";
-}
+  &__slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { display: none; }
+  }
 
-/* 카드 간 가로 간격 20px */
-.shop-style__grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr 1fr;
-  column-gap: 20px;  // ← 핵심
-  align-items: start;
-}
+  &__slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
 
-/* ===== CARD ===== */
-.style-card {
-  position: relative;
-}
+  // Vertical label on left side of image
+  &__label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-inter);
+    font-size: 11px;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 8px;
+    flex-shrink: 0;
+  }
 
-/* 세로 라벨 */
-.style-card__label {
-  position: absolute;
-  left: -40px;
-  bottom: 100px;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  font-size: 12px;
-  font-weight: 600;
-  white-space: nowrap;
-  font-family: "Inter";
-  font-size: 26px;
-}
+  &__main {
+    flex: 1;
+    min-width: 0;
+  }
 
-/* 이미지 */
-.style-card__img {
-  width: 371px;
-  height: 464px;
-  object-fit: cover;
-}
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
 
-/* 텍스트 */
-.style-card__desc {
-  margin-top: 14px;
-  font-size: 11px;
-  line-height: 1.4;
-  max-width: 190px;
-}
+  &__content {
+    padding: 14px 0;
+  }
 
-.style-card__link {
-  font-size: 11px;
-  font-weight: 700;
-  text-decoration: underline;
-  margin-top: 6px;
-  display: inline-block;
-}
+  &__desc {
+    font-family: var(--font-inter);
+    font-size: 11px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 12px;
+  }
 
-/* ===== CENTER ===== */
-.style-slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  &__link {
+    font-family: var(--font-inter);
+    font-size: 11px;
+    font-weight: 700;
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
 
-/* 가운데 카드 세로 강조 */
-.style-card--center .style-card__img {
-  aspect-ratio: 3 / 5;
-  position: relative;
-}
+  // Dots
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
 
-/* 회색 톤 */
-.style-card--center .style-card__img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(150, 150, 150, 0.25);
-}
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d0d0d0;
 
-/* ===== DOTS ===== */
-/* 카드 ↔ dots 간격 60px */
-.style-slider__dots {
-  margin-top: 60px;   // ← 핵심
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ddd;
-}
-
-.dot.active {
-  background: #111;
+    &--active {
+      background: #333;
+    }
+  }
 }

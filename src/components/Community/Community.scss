@@ -1,58 +1,41 @@
 .community {
-  width: 100%;
-  padding-bottom: 150px;
-  background: #fff;
+  padding-top: var(--section-spacing);
 
-  .community-inner {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1.2fr; // 오른쪽 이미지가 더 큼
-    align-items: center;
-  }
-
-  /* 왼쪽 텍스트 박스 */
-  .community-content {
-    background: rgba(0, 0, 0, 0.75);
+  &__box {
+    margin: -50px 16px 0;
+    padding: 24px 20px;
+    background: rgba(0,0,0,0.85);
     color: #fff;
-    padding: 56px 48px;
-    margin-right: -120px; // 이미지 위로 겹치게 (About이랑 반대)
-    z-index: 2;
+    position: relative;
+    z-index: 1;
     text-align: right;
-
-    h3 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      font-family: "Playfair Display";
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.7;
-      opacity: 0.95;
-      margin-bottom: 32px;
-      font-family: "Inter";
-    }
   }
 
-  .community-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
-    padding: 0 22px;
+  &__title {
+    font-family: var(--font-playfair);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 8px 16px;
     border: 1px solid #fff;
-    color: #fff;
-    font-size: 13px;
+    font-size: 10px;
   }
 
-  /* 오른쪽 이미지 */
-  .community-image {
+  &__image {
     img {
       width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
+      height: auto;
     }
   }
 }

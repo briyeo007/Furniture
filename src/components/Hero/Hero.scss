@@ -1,153 +1,122 @@
 .hero {
   position: relative;
-  width: 100%;
-  height: 649px;
-  overflow: hidden;
-  padding: 150px 0;
-  background: url("/images/hero.png") center / cover no-repeat;
+  min-height: 100vh;
+  background: url("/images/hero.png") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
 
-  /* ❗ overlay는 진짜 "배경톤다운"만 */
-  .hero-overlay {
+  &::before {
+    content: "";
     position: absolute;
     inset: 0;
+    background: rgba(0,0,0,0.25);
+  }
+
+  &__content {
+    position: relative;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.25);
-    pointer-events: none;
-  }
-
-  /* ✅ 텍스트/슬라이더가 overlay 안에 있어도 클릭/드래그 가능하게 */
-  .hero-text {
-    position: relative;
-    z-index: 2;
-    pointer-events: auto; /* ⭐ 이게 핵심 */
-    width: 100%;
-
-    display: grid;
-    place-items: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 24px;
-    align-content: start;
-  }
-
-  .hero-title {
-    font-family: "Italianno";
-    font-size: 60px;
-    line-height: 1;
-    padding-top: 150px;
-  }
-
-  .hero-sub {
-    font-size: 18px;
-    opacity: 0.95;
-    font-family: "Inter";
-    font-weight: 400;
-  }
-
-  .hero-cta {
-    margin-top: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 200px;
-    padding: 0 18px;
-    background: #323232;
-    color: #fff;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    font-family: "Inter";
-    font-size: 17px;
-    font-weight: 400;
-  }
-
-  .hero-deals {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 3;
-    top: 135%;
-  }
-
-  .deals-track {
-    display: flex;
-    height: 213px;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-
-    cursor: grab;
-    user-select: none;
-    scroll-behavior: smooth;
-
-    touch-action: pan-x;  /* ⭐ 드래그/스와이프 핵심 */
-    pointer-events: auto; /* ⭐ overlay 때문에 씹힐 때 방지 */
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .deals-track.is-dragging {
-    cursor: grabbing;
-    scroll-behavior: auto;
-  }
-
-  .deal {
-    position: relative;
-    flex: 0 0 calc(100% - 32px);
-    scroll-snap-align: center;
-    
-    height: 213px;
-    padding: 10px 18px;
-    color: #fff;
-
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-    font-family: "Inter";
+    justify-content: center;
     text-align: center;
-
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 4px;
-    backdrop-filter: blur(2px);
-
-    user-select: none;
-    -webkit-user-drag: none;
+    color: #fff;
+    padding: 60px 20px 100px;
   }
 
-  .deal-title { font-size: 22px; }
-  .deal-desc { font-size: 18px; }
+  &__title {
+    font-family: var(--font-italianno);
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
 
-  .deal-icon {
-    position: absolute;
-    right: 14px;
-    bottom: 10px;
+  &__sub {
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #333;
+    color: #fff;
+    font-size: 11px;
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 1;
+    padding: 0 16px 16px;
+  }
+
+  &__track {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar { display: none; }
+  }
+
+  &__card {
+    position: relative;
+    flex: 0 0 85%;
+    min-width: 85%;
+    scroll-snap-align: center;
+    min-height: 120px;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__card-title {
     font-size: 14px;
-    opacity: 0.9;
+    font-weight: 600;
+    margin-bottom: 4px;
   }
 
-  .deal-dots {
+  &__card-desc {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+
+  &__card-icon {
     position: absolute;
-    left: 50%;
+    right: 10px;
     bottom: 10px;
-    transform: translateX(-50%);
-    display: none;
-    gap: 6px;
-  }
-
-  .deal-dots.active { display: flex; }
-
-  .dot {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(255,255,255,0.5);
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .dot.active { background: #fff; }
+  &__dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    &.active { background: #fff; }
+  }
 }

@@ -1,0 +1,57 @@
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 48px 20px 40px;
+  text-align: center;
+
+  &__logo {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 0 28px;
+  }
+
+  &__connect {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    list-style: none;
+
+    li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      font-family: var(--font-inter);
+      font-size: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__copy {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  &__session {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+}
