@@ -5,35 +5,43 @@
     img {
       width: 100%;
       height: auto;
+      display: block;
     }
   }
 
   &__box {
-    margin: -50px 16px 0;
-    padding: 24px 20px;
-    background: rgba(0,0,0,0.85);
+    margin: -60px 0 0 auto;
+    width: calc(100% - 32px);
+    padding: 28px 24px;
+    background: rgba(40, 30, 30, 0.92);
     color: #fff;
     position: relative;
+    text-align: left;
   }
 
   &__title {
     font-family: var(--font-playfair);
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 14px;
   }
 
   &__desc {
+    font-family: var(--font-inter);
     font-size: 11px;
-    line-height: 1.6;
-    margin-bottom: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
     opacity: 0.9;
   }
 
   &__btn {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: 1px solid #fff;
+    color: #fff;
+    font-family: var(--font-inter);
     font-size: 10px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
   }
 }

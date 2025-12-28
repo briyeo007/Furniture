@@ -24,6 +24,9 @@ const DATA = [
 export default function OurHome() {
   const trackRef = useRef(null);
   const [active, setActive] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const onScroll = () => {
     const t = trackRef.current;
@@ -33,21 +36,60 @@ export default function OurHome() {
     setActive(Math.max(0, Math.min(DATA.length - 1, idx)));
   };
 
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    const x = e.touches[0].pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section className="ourhome">
       <h2 className="ourhome__title">Our home<br />with Living spaces</h2>
 
-      <div className="ourhome__slider" ref={trackRef} onScroll={onScroll}>
+      <div
+        className="ourhome__slider"
+        ref={trackRef}
+        onScroll={onScroll}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         {DATA.map((item, i) => (
           <div className="ourhome__card" key={i}>
             <div className="ourhome__img">
-              <img src={item.img} alt={item.title} />
+              <img src={item.img} alt={item.title} draggable="false" />
             </div>
             <div className="ourhome__body">
               <h3 className="ourhome__card-title">{item.title}</h3>
               <p className="ourhome__card-desc">{item.desc}</p>
               <a href="#" className="ourhome__arrow">
-                <span>›</span>
+                <span>→</span>
               </a>
             </div>
           </div>

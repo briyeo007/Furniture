@@ -4,6 +4,9 @@ import "./Hero.scss";
 export default function Hero() {
   const trackRef = useRef(null);
   const [active, setActive] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const deals = [
     { title: "Extendable Dining Table", desc: "More Guests, More Table" },
@@ -20,6 +23,35 @@ export default function Hero() {
     setActive(Math.max(0, Math.min(deals.length - 1, idx)));
   };
 
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    const x = e.touches[0].pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section className="hero">
       <div className="hero__content">
@@ -29,12 +61,22 @@ export default function Hero() {
       </div>
 
       <div className="hero__slider">
-        <div className="hero__track" ref={trackRef} onScroll={onScroll}>
+        <div
+          className="hero__track"
+          ref={trackRef}
+          onScroll={onScroll}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           {deals.map((d, i) => (
             <div className="hero__card" key={i}>
               <p className="hero__card-title">{d.title}</p>
               <p className="hero__card-desc">{d.desc}</p>
-              <span className="hero__card-icon">i</span>
+              <span className="hero__card-icon">→</span>
             </div>
           ))}
         </div>

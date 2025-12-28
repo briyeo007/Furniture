@@ -24,6 +24,9 @@ const slides = [
 export default function ShopByStyle() {
   const trackRef = useRef(null);
   const [active, setActive] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const onScroll = () => {
     const t = trackRef.current;
@@ -33,17 +36,56 @@ export default function ShopByStyle() {
     setActive(Math.max(0, Math.min(slides.length - 1, idx)));
   };
 
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
+    setScrollLeft(trackRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    const x = e.touches[0].pageX - trackRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    trackRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section className="sbs">
       <h2 className="sbs__title">Shop By Style</h2>
 
-      <div className="sbs__slider" ref={trackRef} onScroll={onScroll}>
+      <div
+        className="sbs__slider"
+        ref={trackRef}
+        onScroll={onScroll}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
         {slides.map((slide, i) => (
           <div className="sbs__slide" key={i}>
             <span className="sbs__label">{slide.label}</span>
             <div className="sbs__main">
               <div className="sbs__image">
-                <img src={slide.img} alt={slide.label} />
+                <img src={slide.img} alt={slide.label} draggable="false" />
               </div>
               <div className="sbs__content">
                 <p className="sbs__desc">{slide.desc}</p>

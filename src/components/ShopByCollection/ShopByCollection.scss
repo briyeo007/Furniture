@@ -3,9 +3,10 @@
 
   &__title {
     font-family: var(--font-playfair);
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 600;
     margin-bottom: 16px;
+    color: #000;
   }
 
   &__list {
@@ -17,7 +18,7 @@
   &__card {
     position: relative;
     display: block;
-    height: 160px;
+    height: 140px;
     overflow: hidden;
 
     img {
@@ -29,24 +30,25 @@
 
   &__overlay {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 12px 16px;
+    left: 25px;
+    bottom: 20px;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.3);
     color: #fff;
-    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+    text-align: left;
   }
 
   &__name {
     font-family: var(--font-playfair);
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
   }
 
   &__sub {
-    font-size: 11px;
-    opacity: 0.9;
+    font-family: var(--font-inter);
+    font-size: 9px;
     margin-top: 2px;
+    opacity: 0.9;
   }
 }

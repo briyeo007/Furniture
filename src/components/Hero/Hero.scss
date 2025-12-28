@@ -1,20 +1,11 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url("/images/hero.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-  }
-
   &__content {
     position: relative;
-    z-index: 1;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -22,101 +13,152 @@
     justify-content: center;
     text-align: center;
     color: #fff;
-    padding: 60px 20px 100px;
+    padding: 80px 20px 40px;
+    background: url("/images/hero.png") center/cover no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
   }
 
   &__title {
     font-family: var(--font-italianno);
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 400;
     margin-bottom: 4px;
   }
 
   &__sub {
-    font-size: 11px;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    font-family: var(--font-inter);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
   }
 
   &__btn {
     display: inline-block;
-    padding: 12px 24px;
-    background: #333;
+    padding: 14px 32px;
+    background: rgba(60, 60, 60, 0.85);
     color: #fff;
+    font-family: var(--font-inter);
     font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
   }
 
   &__slider {
     position: relative;
-    z-index: 1;
-    padding: 0 16px 16px;
+    padding: 16px;
+    background: #1a1a1a;
+    overflow: hidden;
   }
 
   &__track {
     display: flex;
     gap: 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar { display: none; }
+    cursor: grab;
+    user-select: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:active {
+      cursor: grabbing;
+    }
   }
 
   &__card {
     position: relative;
-    flex: 0 0 85%;
-    min-width: 85%;
+    flex: 0 0 calc(100vw - 64px);
+    width: calc(100vw - 64px);
     scroll-snap-align: center;
-    min-height: 120px;
+    min-height: 140px;
     padding: 20px;
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(4px);
+    background: center/cover no-repeat;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    &:nth-child(1) {
+      background-image: url("/images/slide1.png");
+    }
+    &:nth-child(2) {
+      background-image: url("/images/slide2.png");
+    }
+    &:nth-child(3) {
+      background-image: url("/images/slide3.png");
+    }
   }
 
   &__card-title {
-    font-size: 14px;
+    position: relative;
+    font-family: var(--font-playfair);
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 4px;
   }
 
   &__card-desc {
-    font-size: 12px;
-    opacity: 0.85;
+    position: relative;
+    font-family: var(--font-inter);
+    font-size: 11px;
+    opacity: 0.9;
   }
 
   &__card-icon {
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 16px;
-    height: 16px;
-    border: 1px solid rgba(255,255,255,0.5);
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    font-size: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 14px;
+    z-index: 1;
   }
 
   &__dots {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin-top: 12px;
+    gap: 8px;
+    margin-top: 16px;
   }
 
   &__dot {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    &.active { background: #fff; }
+    background: rgba(255, 255, 255, 0.4);
+    transition: background 0.3s;
+
+    &.active {
+      background: #fff;
+    }
   }
 }

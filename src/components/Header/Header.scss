@@ -7,27 +7,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
-  background: transparent;
+  padding: 16px 20px;
+  background: #fff;
 
   &__logo {
     font-family: var(--font-inter);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
-    letter-spacing: 1.5px;
-    color: #fff;
+    letter-spacing: 3px;
+    color: #000;
   }
 
   &__menu {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     padding: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 
     span {
-      width: 20px;
-      height: 1px;
-      background: #fff;
+      width: 22px;
+      height: 1.5px;
+      background: #000;
     }
   }
 }
