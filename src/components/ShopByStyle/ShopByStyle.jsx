@@ -78,18 +78,20 @@ export default function ShopByStyle() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
-        {slides.map((slide, i) => (
-          <div className="sbs__slide" key={i}>
-            <span className="sbs__label">{slide.label}</span>
-            <div className="sbs__main">
-              <div className={`sbs__image sbs__image--${slide.id}`} />
-              <div className="sbs__content">
-                <p className="sbs__desc">{slide.desc}</p>
-                <a href="#" className="sbs__link">Shop Now</a>
+        <div className="sbs__track">
+          {slides.map((slide, i) => (
+            <div className="sbs__slide" key={i}>
+              <span className="sbs__label">{slide.label}</span>
+              <div className="sbs__main">
+                <div className={`sbs__image sbs__image--${slide.id}`} />
+                <div className="sbs__content">
+                  <p className="sbs__desc">{slide.desc}</p>
+                  <a href="#" className="sbs__link">Shop Now</a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="sbs__dots">

@@ -12,19 +12,17 @@
   }
 
   &__slider {
-    display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    cursor: grab;
-    user-select: none;
     &::-webkit-scrollbar {
       display: none;
     }
-    &:active {
-      cursor: grabbing;
-    }
+  }
+
+  &__track {
+    display: flex;
   }
 
   &__slide {

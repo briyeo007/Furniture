@@ -76,13 +76,8 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    cursor: grab;
-    user-select: none;
     &::-webkit-scrollbar {
       display: none;
-    }
-    &:active {
-      cursor: grabbing;
     }
   }
 
@@ -137,6 +132,9 @@
     height: 36px;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,7 +153,9 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
+    border: none;
     background: rgba(255, 255, 255, 0.4);
+    cursor: default;
     transition: background 0.3s;
 
     &.active {
