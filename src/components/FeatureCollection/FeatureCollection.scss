@@ -2,12 +2,13 @@
   position: relative;
   min-height: 280px;
   margin-top: 150px;
+  background-image: url("/images/feature.png");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 40px 24px;
+  padding: 40px 200px;
 
   &__content {
     position: relative;

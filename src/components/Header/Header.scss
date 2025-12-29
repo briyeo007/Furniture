@@ -7,30 +7,56 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: 16px 200px;
   background: #fff;
 
   &__logo {
-    font-family: var(--font-inter);
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    color: #000;
+    width: 200px;
+    height: 16px;
+    margin: 0;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: url("/images/logo.png") no-repeat center / contain;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__user,
+  &__menu {
+    padding: 0;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__user {
+    width: 34px;
+    height: 30px;
+    background-image: url("/images/icon-user.png");
   }
 
   &__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 4px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-
-    span {
-      width: 22px;
-      height: 1.5px;
-      background: #000;
-    }
+    width: 34px;
+    height: 24px;
+    background-image: url("/images/icon-menu.png");
   }
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }

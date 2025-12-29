@@ -1,5 +1,5 @@
 .sbs {
-  padding: var(--section-spacing) 0 0;
+  padding: var(--section-spacing) 200px 0;
 
   &__title {
     font-family: var(--font-playfair);
@@ -7,7 +7,7 @@
     font-weight: 600;
     text-align: left;
     margin-bottom: 20px;
-    padding: 0 16px;
+    padding: 0;
     color: #000;
   }
 
@@ -33,7 +33,7 @@
     width: 100%;
     scroll-snap-align: start;
     display: flex;
-    padding: 0 16px;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -59,10 +59,22 @@
   }
 
   &__image {
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--modern-traditional {
+      background-image: url("/images/style-modern-traditional.png");
+    }
+
+    &--midcentury {
+      background-image: url("/images/style-midcentury.png");
+    }
+
+    &--japandi {
+      background-image: url("/images/style-japandi.png");
     }
   }
 

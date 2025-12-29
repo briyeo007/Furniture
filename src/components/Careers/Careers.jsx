@@ -1,13 +1,9 @@
 import "./Careers.scss";
 
-const BASE = import.meta.env.BASE_URL;
-
 export default function Careers() {
   return (
     <section className="careers">
-      <div className="careers__image">
-        <img src={`${BASE}images/career.png`} alt="Careers" />
-      </div>
+      <div className="careers__image" />
       <div className="careers__box">
         <h2 className="careers__title">Careers</h2>
         <p className="careers__desc">

@@ -1,23 +1,21 @@
 import { useRef, useState } from "react";
 import "./ShopByStyle.scss";
 
-const BASE = import.meta.env.BASE_URL;
-
 const slides = [
   {
+    id: "modern-traditional",
     label: "Modern Traditional",
     desc: "Austen offers a clean, timeless blend of modern and traditional style for a comfortable, beautiful home.",
-    img: `${BASE}images/style-modern-traditional.png`,
   },
   {
+    id: "midcentury",
     label: "Mid-Century",
     desc: "Mid-century style mixes clean lines, warm woods, and simple geometric forms.",
-    img: `${BASE}images/style-midcentury.png`,
   },
   {
+    id: "japandi",
     label: "Japandi",
     desc: "A blend of Japanese and Scandinavian aesthetics featuring minimalism and natural materials.",
-    img: `${BASE}images/style-japandi.png`,
   },
 ];
 
@@ -84,9 +82,7 @@ export default function ShopByStyle() {
           <div className="sbs__slide" key={i}>
             <span className="sbs__label">{slide.label}</span>
             <div className="sbs__main">
-              <div className="sbs__image">
-                <img src={slide.img} alt={slide.label} draggable="false" />
-              </div>
+              <div className={`sbs__image sbs__image--${slide.id}`} />
               <div className="sbs__content">
                 <p className="sbs__desc">{slide.desc}</p>
                 <a href="#" className="sbs__link">Shop Now</a>

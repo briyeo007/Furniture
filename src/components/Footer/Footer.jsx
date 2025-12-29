@@ -3,7 +3,12 @@ import "./Footer.scss";
 export default function Footer() {
   return (
     <footer className="footer">
-      <h2 className="footer__logo">LIVINGSPACE</h2>
+      
+      <h2 className="footer__logo">
+  <a href="/">
+    <span className="blind">LIVING SPACES</span>
+  </a>
+</h2>
       <p className="footer__connect">Connect With Us</p>
       <ul className="footer__social">
         <li><a href="#" aria-label="Instagram">IG</a></li>
