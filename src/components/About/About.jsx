@@ -3,12 +3,13 @@ import "./About.scss";
 export default function About() {
   return (
     <section className="about">
+      <h2 className="blind">About</h2>
       <div className="about__inner">
         <div className="about__wrapper">
         <div className="about__item">
           <div className="about__image about__image--about" />
           <div className="about__box about__box--right">
-            <h2 className="about__title">About Us</h2>
+            <h3 className="about__title">About Us</h3>
             <p className="about__desc">
               Living Spaces is expanding nationwide to offer guests an easier, more convenient shopping experience with a huge selection and guaranteed low prices. Plus, enjoy same-day delivery—shop online or visit a showroom and get your new furniture fast.
             </p>
@@ -19,7 +20,7 @@ export default function About() {
         <div className="about__item">
           <div className="about__image about__image--community" />
           <div className="about__box about__box--left">
-            <h2 className="about__title">Community</h2>
+            <h3 className="about__title">Community</h3>
             <p className="about__desc">
               Helping others feel at home is at the heart of our mission. We work with foundations and community organizations to give back and support those in need, focusing on ending homelessness, helping at-risk youth, and supporting veterans.
             </p>

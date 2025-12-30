@@ -75,3 +75,8 @@
     letter-spacing: 0.5px;
   }
 }
+
+.blind {
+  position: absolute;
+  left: -9999px;
+}

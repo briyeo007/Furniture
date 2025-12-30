@@ -33,10 +33,20 @@
   }
 
   &__img {
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--1 {
+      background-image: url("/images/collection-01.png");
+    }
+    &--2 {
+      background-image: url("/images/collection-02.png");
+    }
+    &--3 {
+      background-image: url("/images/collection-03.png");
     }
   }
 

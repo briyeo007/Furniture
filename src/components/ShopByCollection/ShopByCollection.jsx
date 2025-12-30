@@ -16,7 +16,7 @@ export default function ShopByCollection() {
           {collections.map((item, i) => (
             <a className={`sbc__card sbc__card--${item.id}`} href="#" key={i}>
               <div className="sbc__overlay">
-                <p className="sbc__name">{item.name}</p>
+                <strong className="sbc__name">{item.name}</strong>
                 <p className="sbc__sub">{item.sub}</p>
               </div>
             </a>

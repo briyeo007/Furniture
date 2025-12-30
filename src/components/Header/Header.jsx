@@ -10,11 +10,11 @@ export default function Header() {
           </a>
         </h1>
         <div className="header__icons">
-          <button className="header__user" aria-label="User">
-            <span className="blind">사용자</span>
-          </button>
+          <a href="#" className="header__user" aria-label="User">
+            <span className="blind">login</span>
+          </a>
           <button className="header__menu" aria-label="Menu">
-            <span className="blind">메뉴열기</span>
+            <span className="blind">menu</span>
           </button>
         </div>
       </div>
