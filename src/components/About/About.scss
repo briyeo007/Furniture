@@ -1,5 +1,7 @@
 .about {
-  padding: var(--section-spacing) 30px 0;
+  &__inner {
+    padding: var(--section-spacing) 30px 0;
+  }
 
   &__wrapper {
     display: flex;

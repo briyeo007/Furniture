@@ -5,10 +5,14 @@
   background-image: url("/images/feature.png");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 40px 30px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 40px 30px;
+    min-height: 280px;
+  }
 
   &__content {
     position: relative;

@@ -67,39 +67,41 @@ export default function OurHome() {
 
   return (
     <section className="ourhome">
-      <h2 className="ourhome__title">Our home<br />with Living spaces</h2>
+      <div className="ourhome__inner">
+        <h2 className="ourhome__title">Our home<br />with Living spaces</h2>
 
-      <div
-        className="ourhome__slider"
-        ref={trackRef}
-        onScroll={onScroll}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-      >
-        {DATA.map((item, i) => (
-          <div className="ourhome__card" key={i}>
-            <div className="ourhome__img">
-              <img src={item.img} alt={item.title} draggable="false" />
+        <div
+          className="ourhome__slider"
+          ref={trackRef}
+          onScroll={onScroll}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          {DATA.map((item, i) => (
+            <div className="ourhome__card" key={i}>
+              <div className="ourhome__img">
+                <img src={item.img} alt={item.title} draggable="false" />
+              </div>
+              <div className="ourhome__body">
+                <h3 className="ourhome__card-title">{item.title}</h3>
+                <p className="ourhome__card-desc">{item.desc}</p>
+                <a href="#" className="ourhome__arrow">
+                  <span>→</span>
+                </a>
+              </div>
             </div>
-            <div className="ourhome__body">
-              <h3 className="ourhome__card-title">{item.title}</h3>
-              <p className="ourhome__card-desc">{item.desc}</p>
-              <a href="#" className="ourhome__arrow">
-                <span>→</span>
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="ourhome__dots">
-        {DATA.map((_, i) => (
-          <span key={i} className={`ourhome__dot ${active === i ? "ourhome__dot--active" : ""}`} />
-        ))}
+        <div className="ourhome__dots">
+          {DATA.map((_, i) => (
+            <span key={i} className={`ourhome__dot ${active === i ? "ourhome__dot--active" : ""}`} />
+          ))}
+        </div>
       </div>
     </section>
   );

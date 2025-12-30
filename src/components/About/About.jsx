@@ -3,7 +3,8 @@ import "./About.scss";
 export default function About() {
   return (
     <section className="about">
-      <div className="about__wrapper">
+      <div className="about__inner">
+        <div className="about__wrapper">
         <div className="about__item">
           <div className="about__image about__image--about" />
           <div className="about__box about__box--right">
@@ -24,6 +25,7 @@ export default function About() {
             </p>
             <a href="#" className="about__btn">View More</a>
           </div>
+        </div>
         </div>
       </div>
     </section>

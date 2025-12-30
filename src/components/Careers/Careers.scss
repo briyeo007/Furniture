@@ -1,5 +1,7 @@
 .careers {
-  padding-top: var(--section-spacing);
+  &__inner {
+    padding-top: var(--section-spacing);
+  }
 
   &__image {
     width: 100%;

@@ -2,12 +2,7 @@
   position: relative;
   min-height: 300px;
   margin-top: 60px;
-  padding: 0 30px;
   background: url("/images/support.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   color: #fff;
 
   &::before {
@@ -15,6 +10,16 @@
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 30px;
+    min-height: 300px;
   }
 
   &__overlay {

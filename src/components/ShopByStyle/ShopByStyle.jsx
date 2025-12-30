@@ -65,39 +65,41 @@ export default function ShopByStyle() {
 
   return (
     <section className="sbs">
-      <h2 className="sbs__title">Shop By Style</h2>
+      <div className="sbs__inner">
+        <h2 className="sbs__title">Shop By Style</h2>
 
-      <div
-        className="sbs__slider"
-        ref={trackRef}
-        onScroll={onScroll}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-      >
-        <div className="sbs__track">
-          {slides.map((slide, i) => (
-            <div className="sbs__slide" key={i}>
-              <span className="sbs__label">{slide.label}</span>
-              <div className="sbs__main">
-                <div className={`sbs__image sbs__image--${slide.id}`} />
-                <div className="sbs__content">
-                  <p className="sbs__desc">{slide.desc}</p>
-                  <a href="#" className="sbs__link">Shop Now</a>
+        <div
+          className="sbs__slider"
+          ref={trackRef}
+          onScroll={onScroll}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
+          <div className="sbs__track">
+            {slides.map((slide, i) => (
+              <div className="sbs__slide" key={i}>
+                <span className="sbs__label">{slide.label}</span>
+                <div className="sbs__main">
+                  <div className={`sbs__image sbs__image--${slide.id}`} />
+                  <div className="sbs__content">
+                    <p className="sbs__desc">{slide.desc}</p>
+                    <a href="#" className="sbs__link">Shop Now</a>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="sbs__dots">
+          {slides.map((_, i) => (
+            <span key={i} className={`sbs__dot ${active === i ? "sbs__dot--active" : ""}`} />
           ))}
         </div>
-      </div>
-
-      <div className="sbs__dots">
-        {slides.map((_, i) => (
-          <span key={i} className={`sbs__dot ${active === i ? "sbs__dot--active" : ""}`} />
-        ))}
       </div>
     </section>
   );

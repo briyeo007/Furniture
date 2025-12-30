@@ -31,31 +31,33 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero__content">
-        <h2 className="hero__title">Christmas Sales</h2>
-        <p className="hero__sub">~WEEKEND DEALS~</p>
-        <a href="#" className="hero__btn">Start Saving</a>
-      </div>
-
-      <div className="hero__slider" onWheel={handleWheel}>
-        <div className="hero__track" ref={trackRef}>
-          {deals.map((d, i) => (
-            <div className="hero__card" key={i}>
-              <h3 className="hero__card-title">{d.title}</h3>
-              <strong className="hero__card-desc">{d.desc}</strong>
-              <a className="hero__card-icon" href={d.link}>→</a>
-            </div>
-          ))}
+      <div className="hero__inner">
+        <div className="hero__content">
+          <h2 className="hero__title">Christmas Sales</h2>
+          <p className="hero__sub">~WEEKEND DEALS~</p>
+          <a href="#" className="hero__btn">Start Saving</a>
         </div>
-        <div className="hero__dots">
-          {deals.map((_, i) => (
-            <button
-              key={i}
-              className={`hero__dot ${active === i ? "active" : ""}`}
-              onMouseEnter={() => goToSlide(i)}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+
+        <div className="hero__slider" onWheel={handleWheel}>
+          <div className="hero__track" ref={trackRef}>
+            {deals.map((d, i) => (
+              <div className="hero__card" key={i}>
+                <h3 className="hero__card-title">{d.title}</h3>
+                <strong className="hero__card-desc">{d.desc}</strong>
+                <a className="hero__card-icon" href={d.link}>→</a>
+              </div>
+            ))}
+          </div>
+          <div className="hero__dots">
+            {deals.map((_, i) => (
+              <button
+                key={i}
+                className={`hero__dot ${active === i ? "active" : ""}`}
+                onMouseEnter={() => goToSlide(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
