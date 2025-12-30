@@ -13,8 +13,8 @@
   }
 
   &__box {
-    margin: -60px 30px 0 30px;
-    width: calc(100% - 60px - 32px);
+    margin: -60px var(--section-padding) 0 var(--section-padding);
+    width: calc(100% - 15.385% - 32px);
     padding: 28px 24px;
     background: rgba(40, 30, 30, 0.92);
     color: #fff;

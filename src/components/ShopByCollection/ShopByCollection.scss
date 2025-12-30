@@ -1,6 +1,6 @@
 .sbc {
   &__inner {
-    padding: var(--section-spacing) 30px 60px;
+    padding: var(--section-spacing) var(--section-padding) 60px;
   }
 
   &__title {

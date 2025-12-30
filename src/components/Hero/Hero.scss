@@ -17,7 +17,7 @@
     justify-content: center;
     text-align: center;
     color: #fff;
-    padding: 80px 30px 40px;
+    padding: 80px var(--section-padding) 40px;
     background: url("/images/hero.png") center/cover no-repeat;
 
     &::before {
