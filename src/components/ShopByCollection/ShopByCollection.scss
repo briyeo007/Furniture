@@ -36,6 +36,11 @@
 
     &--crypton {
       background-image: url("/images/crypton.png");
+
+      .sbc__overlay {
+        width: 273px;
+        height: 100px;
+      }
     }
 
     &--alton {
@@ -47,6 +52,8 @@
     position: absolute;
     left: 25px;
     bottom: 20px;
+    width: 200px;
+    height: 100px;
     padding: 12px 20px;
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
@@ -55,15 +62,18 @@
 
   &__name {
     font-family: var(--font-playfair);
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 400;
     line-height: 1;
   }
 
   &__sub {
-    font-family: var(--font-inter);
-    font-size: 9px;
+    font-family: "Istok Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     margin-top: 2px;
     opacity: 0.9;
+    text-align: right;
+    padding-left: 30px;
   }
 }
