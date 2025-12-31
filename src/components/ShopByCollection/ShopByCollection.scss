@@ -5,16 +5,16 @@
 
   &__title {
     font-family: var(--font-playfair);
-    font-size: 22px;
+    font-size: 38px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 62px;
     color: #000;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 32px;
   }
 
   &__card {

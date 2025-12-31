@@ -20,34 +20,38 @@
     text-align: right;
     color: #fff;
     background: rgba(40, 35, 30, 0.75);
-    padding: 24px 20px;
+    padding: 26px 25px;
   }
 
   &__title {
     font-family: var(--font-playfair);
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1;
-    margin-bottom: 4px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 10px;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   &__sub {
-    font-family: var(--font-inter);
-    font-size: 11px;
+    font-family: "Istok Web", sans-serif;
+    font-size: 20px;
     font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
+    text-align: center;
+    margin-bottom: 12px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   }
 
   &__btn {
-    display: inline-block;
+    display: block;
+    width: 148px;
+    margin: 0 auto;
     padding: 10px 20px;
-    background: rgba(60, 50, 45, 0.9);
+    text-align: center;
+    background: #6C6C6C;
     color: #fff;
     font-family: var(--font-inter);
-    font-size: 11px;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
   }

@@ -13,9 +13,9 @@
   }
 
   &__box {
-    margin: -60px var(--section-padding) 0 var(--section-padding);
-    width: calc(100% - 15.385% - 32px);
-    padding: 28px 24px;
+    margin: -60px var(--section-padding) 0 -7.6925vw;
+    width: calc(100% - 32px + 7.6925vw);
+    padding: 40px 36px 5px;
     background: rgba(40, 30, 30, 0.92);
     color: #fff;
     position: relative;
@@ -24,27 +24,32 @@
 
   &__title {
     font-family: var(--font-playfair);
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 14px;
   }
 
   &__desc {
     font-family: var(--font-inter);
-    font-size: 11px;
-    line-height: 1.7;
-    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 30px;
     opacity: 0.9;
   }
 
   &__btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 50px;
+    margin-left: auto;
+    background: #6C6C6C;
     color: #fff;
     font-family: var(--font-inter);
-    font-size: 10px;
+    font-size: 17px;
+    font-weight: 500;
     text-decoration: none;
-    letter-spacing: 0.5px;
+    margin-bottom: 59px;
   }
 }
