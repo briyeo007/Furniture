@@ -98,3 +98,38 @@
   position: absolute;
   left: -9999px;
 }
+
+@media (min-width: 768px) {
+  .about {
+    &__image {
+      &--about {
+        margin-left: -5.99vw;
+        width: calc(100% + 5.99vw);
+      }
+
+      &--community {
+        margin-right: -5.99vw;
+        width: calc(100% + 5.99vw);
+      }
+    }
+
+    &__box {
+      &--right {
+        margin-right: 0 !important;
+        width: calc(100% - 85px);
+      }
+
+      &--left {
+        margin-left: 0 !important;
+        width: calc(100% - 128px);
+      }
+    }
+
+    &__btn {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

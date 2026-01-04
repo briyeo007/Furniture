@@ -10,13 +10,13 @@ const DATA = [
     img: `${BASE}images/collection-01.png`,
   },
   {
-    title: "Visit Showroom",
-    desc: "Experience our furniture in person at one of our showrooms. Our design experts are ready to help you find the perfect pieces.",
+    title: "Services",
+    desc: "The Livingspace team works directly with clients and design professionals to offer the very best in design. Our expertise and our broad range of products provide a comprehensive resource for residential and commercial projects.",
     img: `${BASE}images/collection-02.png`,
   },
   {
-    title: "Design Services",
-    desc: "Work with our professional designers to create your dream space. Free consultations available in-store and online.",
+    title: "Projects",
+    desc: "Our in-house design team will take you from concept through to final installation. Our designers can work with you to provide floor plans and furniture specification including fabric and material proposals.",
     img: `${BASE}images/collection-03.png`,
   },
 ];

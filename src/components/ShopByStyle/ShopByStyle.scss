@@ -76,6 +76,10 @@
     &--japandi {
       background-image: url("/images/style-japandi.png");
     }
+
+    &--community {
+      background-image: url("/images/style-crypton.png");
+    }
   }
 
   &__content {
@@ -117,3 +121,29 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .sbs {
+    &__slide {
+      flex: 0 0 85%;
+      width: 85%;
+
+      &--japandi {
+        margin-top: 150px;
+      }
+
+      &--midcentury {
+        margin-top: 67px;
+      }
+
+      &--community {
+        margin-top: 159px;
+      }
+    }
+
+    &__dots {
+      margin-top: 53px;
+    }
+  }
+}
+

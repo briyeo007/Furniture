@@ -53,3 +53,19 @@
     margin-bottom: 59px;
   }
 }
+
+@media (min-width: 768px) {
+  .careers {
+    &__box {
+      margin: -60px auto 0 var(--section-padding) !important;
+      width: calc(100% - 142px);
+    }
+
+    &__btn {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

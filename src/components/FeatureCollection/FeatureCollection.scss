@@ -56,3 +56,25 @@
     text-decoration: none;
   }
 }
+
+@media (min-width: 768px) {
+  .fc {
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    &__sub {
+      font-size: 30px;
+      line-height: 64px;
+    }
+
+    &__btn {
+      width: 200px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -6,8 +6,8 @@ export default function Hero() {
   const [active, setActive] = useState(0);
 
   const deals = [
-    { title: "Extendable Dining Table", desc: "More Guests, More Table", link: "#" },
     { title: "WINTER DEALS", desc: "Savings That Sleigh", link: "#" },
+    { title: "Extendable Dining Table", desc: "More Guests, More Table", link: "#" },
     { title: "New Arrivals", desc: "See Our Latest Designs", link: "#" },
   ];
 

@@ -172,3 +172,45 @@
   position: absolute;
   left: -9999px;
 }
+
+@media (min-width: 768px) {
+  .hero {
+    &__text {
+      padding-top: 190px;
+      padding-bottom: 167px;
+    }
+
+    &__slider::before {
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    &__title {
+      font-size: 130px;
+      line-height: 130%;
+    }
+
+    &__sub {
+      font-size: 30px;
+      line-height: normal;
+    }
+
+    &__track {
+      overflow: visible;
+      scroll-snap-type: none;
+    }
+
+    &__card {
+      flex: 1;
+      width: auto;
+      scroll-snap-align: none;
+    }
+
+    &__card-title {
+      white-space: nowrap;
+    }
+
+    &__dots {
+      display: none;
+    }
+  }
+}

@@ -8,14 +8,19 @@ const slides = [
     desc: "Austen offers a clean, timeless blend of modern and traditional style for a comfortable, beautiful home.",
   },
   {
+    id: "japandi",
+    label: "Japandi",
+    desc: "A blend of Japanese and Scandinavian aesthetics featuring minimalism and natural materials.",
+  },
+  {
     id: "midcentury",
     label: "Mid-Century",
     desc: "Mid-century style mixes clean lines, warm woods, and simple geometric forms.",
   },
   {
-    id: "japandi",
-    label: "Japandi",
-    desc: "A blend of Japanese and Scandinavian aesthetics featuring minimalism and natural materials.",
+    id: "community",
+    label: "Community",
+    desc: "Helping others establish a feeling of home is central",
   },
 ];
 
@@ -81,7 +86,7 @@ export default function ShopByStyle() {
         >
           <div className="sbs__track">
             {slides.map((slide, i) => (
-              <div className="sbs__slide" key={i}>
+              <div className={`sbs__slide sbs__slide--${slide.id}`} key={i}>
                 <span className="sbs__label">{slide.label}</span>
                 <div className="sbs__main">
                   <div className={`sbs__image sbs__image--${slide.id}`} />

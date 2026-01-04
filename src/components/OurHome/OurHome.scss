@@ -108,3 +108,16 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .ourhome {
+    &__slider {
+      gap: 20px;
+    }
+
+    &__card {
+      flex: 0 0 48%;
+      width: 48%;
+    }
+  }
+}

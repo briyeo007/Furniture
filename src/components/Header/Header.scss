@@ -44,6 +44,7 @@
   }
 
   &__user {
+    display: none;
     width: 34px;
     height: 30px;
     background-image: url("/images/icon-user.png");
@@ -62,4 +63,21 @@
   height: 1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__inner {
+      padding: 38px var(--section-padding) 43px;
+    }
+
+    &__logo {
+      width: 300px;
+      height: 23.96px;
+    }
+
+    &__user {
+      display: block;
+    }
+  }
 }
