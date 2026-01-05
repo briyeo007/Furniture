@@ -175,14 +175,18 @@
 
 @media (min-width: 768px) {
   .hero {
-    height: 800px;
+    height: 825px;
 
     &__content {
-      padding-top: 200px;
+      padding-top: 230px;
     }
 
-    &__slider::before {
-      background: rgba(0, 0, 0, 0.15);
+    &__slider {
+      height: 216px;
+
+      &::before {
+        background: rgba(0, 0, 0, 0.15);
+      }
     }
 
     &__title {
@@ -198,6 +202,8 @@
     &__track {
       overflow: visible;
       scroll-snap-type: none;
+      height: 100%;
+      align-items: center;
     }
 
     &__card {
@@ -208,6 +214,10 @@
 
     &__card-title {
       white-space: nowrap;
+    }
+
+    &__card-icon {
+      border: 1px solid rgba(255, 255, 255, 1);
     }
 
     &__dots {
