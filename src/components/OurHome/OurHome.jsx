@@ -68,7 +68,7 @@ export default function OurHome() {
   return (
     <section className="ourhome">
       <div className="ourhome__inner">
-        <h2 className="ourhome__title">Our home<br />with Living spaces</h2>
+        <h2 className="ourhome__title">Our home <br className="mobile-br" />with Living spaces</h2>
 
         <div className="ourhome__track">
           <div

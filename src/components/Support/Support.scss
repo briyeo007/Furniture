@@ -73,6 +73,15 @@
     &__desc {
       font-size: 22px;
       line-height: 28px;
+
+      .mobile-br {
+        display: none;
+      }
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  .support {
   }
 }

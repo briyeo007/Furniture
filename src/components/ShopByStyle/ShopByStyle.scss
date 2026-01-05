@@ -147,3 +147,20 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .sbs {
+    &__slider {
+      margin-right: calc(-1 * var(--section-padding));
+    }
+
+    &__track {
+      gap: 20px;
+    }
+
+    &__slide {
+      flex: 0 0 45%;
+      width: 45%;
+    }
+  }
+}
+
