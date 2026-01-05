@@ -44,16 +44,16 @@
 
     &--right {
       margin-left: auto;
-      margin-right: -7.6925vw;
-      width: calc(100% - 32px + 7.6925vw);
+      margin-right: calc(-1 * var(--section-padding));
+      width: calc(100% - 32px + var(--section-padding));
       padding: 40px 36px 5px;
       text-align: left;
     }
 
     &--left {
       margin-right: auto;
-      margin-left: -7.6925vw;
-      width: calc(100% - 32px + 7.6925vw);
+      margin-left: calc(-1 * var(--section-padding));
+      width: calc(100% - 32px + var(--section-padding));
       padding: 40px 36px 5px;
       text-align: right;
 
@@ -115,13 +115,15 @@
 
     &__box {
       &--right {
-        margin-right: 0 !important;
+        margin-right: 0;
         width: calc(100% - 85px);
+        margin-left: auto;
       }
 
       &--left {
-        margin-left: 0 !important;
-        width: calc(100% - 128px);
+        margin-left: 0;
+        width: calc(100% - 85px);
+        margin-right: auto;
       }
     }
 
@@ -135,6 +137,5 @@
 }
 
 @media (min-width: 1024px) {
-  .about {
-  }
+  
 }

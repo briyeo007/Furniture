@@ -124,6 +124,10 @@
 
 @media (min-width: 768px) {
   .sbs {
+    &__slider {
+      margin-right: calc(-1 * var(--section-padding));
+    }
+
     &__slide {
       flex: 0 0 85%;
       width: 85%;
