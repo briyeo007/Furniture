@@ -101,6 +101,8 @@
 }
 
 @media (min-width: 768px) {
+
+  
   .sbc {
     &__card {
       &--dean,
@@ -113,6 +115,10 @@
         }
       }
     }
+    &__title{
+    margin-bottom: 56px;
+  }
+
   }
 }
 
