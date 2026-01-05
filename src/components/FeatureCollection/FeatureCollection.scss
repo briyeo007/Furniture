@@ -1,17 +1,18 @@
 .fc {
   position: relative;
-  min-height: 280px;
+  height: 496px;
   margin-top: 150px;
   background-image: url("/images/feature.png");
   background-size: cover;
-  background-position: center;
+  background-position: 45% center;
+
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 40px var(--section-padding);
-    min-height: 280px;
+    height: 100%;
   }
 
   &__content {
@@ -80,6 +81,5 @@
 }
 
 @media (min-width: 1024px) {
-  .fc {
-  }
+  
 }

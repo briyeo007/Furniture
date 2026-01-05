@@ -28,23 +28,42 @@
 
     &--dean {
       background-image: url("/images/dean.png");
+
+      .sbc__overlay {
+        width: 163px;
+        height: 80px;
+      }
     }
 
     &--jolene {
       background-image: url("/images/jolene.png");
+
+      .sbc__overlay {
+        width: 182px;
+        height: 80px;
+      }
     }
 
     &--crypton {
       background-image: url("/images/crypton.png");
 
       .sbc__overlay {
-        width: 273px;
-        height: 100px;
+        width: 234px;
+        height: 75px;
       }
     }
 
     &--alton {
       background-image: url("/images/alton.png");
+
+      .sbc__overlay {
+        width: 145px;
+        height: 100px;
+      }
+
+      .sbc__sub {
+        white-space: nowrap;
+      }
     }
   }
 
@@ -58,6 +77,9 @@
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__name {
@@ -80,6 +102,17 @@
 
 @media (min-width: 768px) {
   .sbc {
+    &__card {
+      &--dean,
+      &--jolene,
+      &--crypton,
+      &--alton {
+        .sbc__overlay {
+          width: 200px;
+          height: 100px;
+        }
+      }
+    }
   }
 }
 

@@ -8,7 +8,7 @@
     font-size: 38px;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 52px;
     padding: 0;
     color: #000;
   }
@@ -60,7 +60,7 @@
 
   &__image {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 306px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,6 +126,12 @@
   .sbs {
     &__slider {
       margin-right: calc(-1 * var(--section-padding));
+    }
+
+    &__image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
     }
 
     &__slide {

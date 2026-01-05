@@ -23,14 +23,18 @@
 
     &--about {
       background-image: url("/images/about.png");
-      margin-left: -7.6925vw;
-      width: calc(100% + 7.6925vw);
+      margin-left: -30px;
+      width: calc(100% + 30px);
+      height: 373px;
+      aspect-ratio: unset;
     }
 
     &--community {
       background-image: url("/images/community.png");
-      margin-right: -7.6925vw;
-      width: calc(100% + 7.6925vw);
+      margin-right: -30px;
+      width: calc(100% + 30px);
+      height: 372px;
+      aspect-ratio: unset;
     }
   }
 
@@ -43,6 +47,7 @@
     margin-top: -60px;
 
     &--right {
+      margin-top: -115px;
       margin-left: auto;
       margin-right: calc(-1 * var(--section-padding));
       width: calc(100% - 32px + var(--section-padding));
@@ -51,6 +56,7 @@
     }
 
     &--left {
+      margin-top: -130px;
       margin-right: auto;
       margin-left: calc(-1 * var(--section-padding));
       width: calc(100% - 32px + var(--section-padding));
@@ -103,13 +109,13 @@
   .about {
     &__image {
       &--about {
-        margin-left: -5.99vw;
-        width: calc(100% + 5.99vw);
+        margin-left: -46px;
+        width: calc(100% + 46px);
       }
 
       &--community {
-        margin-right: -5.99vw;
-        width: calc(100% + 5.99vw);
+        margin-right: -46px;
+        width: calc(100% + 46px);
       }
     }
 
