@@ -34,19 +34,33 @@
     gap: 38px;
     margin-bottom: 40px;
     list-style: none;
+  }
 
-    li a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      font-family: var(--font-inter);
-      font-size: 10px;
-      color: #fff;
-      text-decoration: none;
+  &__social-icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--ig {
+      background-image: url("/images/ig.png");
+    }
+    &--fb {
+      background-image: url("/images/fb.png");
+    }
+    &--tiktok {
+      background-image: url("/images/tiktok.png");
+    }
+    &--yt {
+      background-image: url("/images/yt.png");
+    }
+    &--rss {
+      background-image: url("/images/rss.png");
+    }
+    &--pine {
+      background-image: url("/images/pine.png");
     }
   }
 

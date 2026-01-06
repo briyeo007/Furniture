@@ -11,12 +11,12 @@ export default function Footer() {
         </h2>
         <p className="footer__connect">Connect With Us</p>
         <ul className="footer__social">
-          <li><a href="#" aria-label="Instagram" target="_blank" title="new tab">IG</a></li>
-          <li><a href="#" aria-label="Facebook" target="_blank" title="new tab">FB</a></li>
-          <li><a href="#" aria-label="TikTok" target="_blank" title="new tab">TT</a></li>
-          <li><a href="#" aria-label="YouTube" target="_blank" title="new tab">YT</a></li>
-          <li><a href="#" aria-label="RSS" target="_blank" title="new tab">RSS</a></li>
-          <li><a href="#" aria-label="Pinterest" target="_blank" title="new tab">P</a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--ig" aria-label="Instagram" target="_blank" title="new tab"><span className="blind">Instagram</span></a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--fb" aria-label="Facebook" target="_blank" title="new tab"><span className="blind">Facebook</span></a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--tiktok" aria-label="TikTok" target="_blank" title="new tab"><span className="blind">TikTok</span></a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--yt" aria-label="YouTube" target="_blank" title="new tab"><span className="blind">YouTube</span></a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--rss" aria-label="RSS" target="_blank" title="new tab"><span className="blind">RSS</span></a></li>
+          <li><a href="#" className="footer__social-icon footer__social-icon--pine" aria-label="Pinterest" target="_blank" title="new tab"><span className="blind">Pinterest</span></a></li>
         </ul>
         <p className="footer__copy">
           © 2025 Living Spaces, All rights reserved.
