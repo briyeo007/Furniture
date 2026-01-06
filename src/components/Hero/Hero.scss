@@ -223,16 +223,54 @@
 
 @media (min-width: 1024px) {
   .hero {
+    height: 880px;
+    margin-top: 105px;
+
     &__content {
-      padding-top: 190px;
+      padding-top: 216px;
     }
 
     &__title {
       font-size: 130px;
+      line-height: 70%;
     }
 
     &__sub {
       font-size: 30px;
     }
+
+    &__btn {
+      width: 200px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    &__slider {
+      height: 234px;
   }
+
+   &__card {
+      
+      padding-top: 67px;
+    }
+
+    &__card-title {
+    font-family: var(--font-inter);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  &__card-desc {
+    position: relative;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+}
 }

@@ -71,5 +71,37 @@
 
 @media (min-width: 1024px) {
   .careers {
+    &__box {
+      margin: -170px auto 0 var(--section-padding) !important;
+      width: calc(100% - 481px);
+      bottom: 70px;
+      padding-top: 21px;
+    }
+
+    &__image {
+      height: 465px;
+    }
+
+     &__title {
+    font-family: var(--font-playfair);
+    font-size: 34px;
+    font-weight: 600;
   }
+
+    &__desc {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 54px;
+    opacity: 0.9;
+  }
+
+  .careers__btn {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 34px;
+  }
+  
+
+}
 }

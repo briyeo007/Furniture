@@ -158,6 +158,29 @@
 
 @media (min-width: 1024px) {
   .sbs {
+    &__title {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 70px;
+    }
+
+    &__label {
+      font-size: 26px;
+      font-weight: 700;
+      padding-right: 0;
+    }
+
+    &__image {
+      height: 464px;
+      width: 100%;
+    }
+
+    &__desc {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
     &__slider {
       margin-right: calc(-1 * var(--section-padding));
     }
@@ -167,7 +190,7 @@
     }
 
     &__slide {
-      flex: 0 0 45%;
+      flex: 0 0 42%;
       width: 45%;
     }
   }

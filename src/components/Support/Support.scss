@@ -82,5 +82,21 @@
 
 @media (min-width: 1024px) {
   .support {
+    &__inner {
+      height: 431px;
+    }
+
+    &__title {
+      font-size: 90px;
+      line-height: 90%;
+      margin-bottom: 30px;
+    }
+ &__desc {
+      font-size: 26px;
+      line-height: 30%;
+      margin-bottom: 70px;
+      white-space: nowrap;
+ }
+
   }
 }

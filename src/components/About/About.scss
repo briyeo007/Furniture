@@ -147,5 +147,53 @@
 }
 
 @media (min-width: 1024px) {
-  
+  .about {
+    &__item {
+      position: relative;
+    }
+
+    &__image {
+      &--about {
+        width: 73%;
+        height: 500px;
+      }
+
+      &--community {
+        width: 73%;
+        margin-left: auto;
+        height: 500px;
+      }
+    }
+
+    &__box {
+      &--right {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 66%;
+        margin: 0;
+      }
+
+      &--left {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 66%;
+        margin: 0;
+        height: auto;
+      }
+    }
+
+    &__title {
+      font-size: 34px;
+      font-weight: 700;
+    }
+
+    &__desc {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
 }
