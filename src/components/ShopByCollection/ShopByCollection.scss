@@ -1,6 +1,6 @@
 .sbc {
   &__inner {
-    padding: var(--section-spacing) var(--section-padding) 60px;
+    padding: var(--section-spacing) var(--section-padding) 150px;
   }
 
   &__title {
@@ -30,7 +30,6 @@
       background-image: url("/images/dean.png");
 
       .sbc__overlay {
-        width: 163px;
         height: 80px;
       }
     }
@@ -39,7 +38,6 @@
       background-image: url("/images/jolene.png");
 
       .sbc__overlay {
-        width: 182px;
         height: 80px;
       }
     }
@@ -48,7 +46,6 @@
       background-image: url("/images/crypton.png");
 
       .sbc__overlay {
-        width: 234px;
         height: 75px;
       }
     }
@@ -57,7 +54,7 @@
       background-image: url("/images/alton.png");
 
       .sbc__overlay {
-        width: 145px;
+    
         height: 100px;
       }
 
@@ -71,7 +68,6 @@
     position: absolute;
     left: 25px;
     bottom: 20px;
-    width: 200px;
     height: 100px;
     padding: 12px 20px;
     background: rgba(0, 0, 0, 0.3);
@@ -87,6 +83,7 @@
     font-size: 44px;
     font-weight: 400;
     line-height: 1;
+    margin-right: 25px;
   }
 
   &__sub {
@@ -96,7 +93,6 @@
     margin-top: 2px;
     opacity: 0.9;
     text-align: right;
-    padding-left: 30px;
   }
 }
 
@@ -110,7 +106,6 @@
       &--crypton,
       &--alton {
         .sbc__overlay {
-          width: 200px;
           height: 100px;
         }
       }

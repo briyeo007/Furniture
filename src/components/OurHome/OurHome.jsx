@@ -89,7 +89,7 @@ export default function OurHome() {
                   <h3 className="ourhome__card-title">{item.title}</h3>
                   <p className="ourhome__card-desc">{item.desc}</p>
                   <a href="#" className="ourhome__arrow">
-                    <span>→</span>
+                    <span className="blind">바로가기</span>
                   </a>
                 </div>
               </div>

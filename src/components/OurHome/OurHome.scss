@@ -30,6 +30,10 @@
     scroll-snap-align: start;
     padding: 0;
     box-sizing: border-box;
+
+    &:nth-child(2) .ourhome__body {
+      padding-bottom: 50px;
+    }
   }
 
   &__img {
@@ -58,7 +62,7 @@
   &__card-title {
     font-family: var(--font-inter);
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 10px;
     color: #000;
     text-underline-offset: 3px;
@@ -75,28 +79,17 @@
   }
 
   &__arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     width: 48px;
     height: 48px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    text-decoration: none;
-    color: #000;
-
-    span {
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 700;
-    }
+    background: url("/images/arrow.png") center/contain no-repeat;
+    filter: brightness(0);
   }
 
   &__dots {
     display: flex;
     justify-content: center;
     gap: 8px;
-    margin-top: 20px;
   }
 
   &__dot {

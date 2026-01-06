@@ -60,7 +60,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 16px;
+    height: 213px;
     background: rgba(26, 26, 26, 39%);
     overflow: hidden;
 
@@ -77,10 +77,13 @@
   &__track {
     display: flex;
     gap: 12px;
+    padding: 0 25px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    position: relative;
+    z-index: 2;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -91,8 +94,8 @@
     flex: 0 0 calc(100vw - 64px);
     width: calc(100vw - 64px);
     scroll-snap-align: center;
-    height: 140px;
     padding: 20px;
+    padding-top: 35px;
     background: center/cover no-repeat;
     color: #fff;
     display: flex;
@@ -114,7 +117,7 @@
 
   &__card-title {
     position: relative;
-    font-family: var(--font-playfair);
+    font-family: var(--font-inter);
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 4px;
@@ -134,15 +137,8 @@
     transform: translateX(-50%);
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    background: transparent;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+    background: url("/images/arrow.png") center/contain no-repeat;
+    filter: brightness(0) invert(1);
     z-index: 1;
   }
 
@@ -200,6 +196,7 @@
     }
 
     &__track {
+      padding: 0;
       overflow: visible;
       scroll-snap-type: none;
       height: 100%;
@@ -214,10 +211,6 @@
 
     &__card-title {
       white-space: nowrap;
-    }
-
-    &__card-icon {
-      border: 1px solid rgba(255, 255, 255, 1);
     }
 
     &__dots {
