@@ -131,13 +131,11 @@
 
     &__image {
       width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
+      height: 401px;
     }
 
     &__slide {
-      flex: 0 0 85%;
-      width: 85%;
+      flex: 0 0 56%;
 
       &--japandi {
         margin-top: 150px;

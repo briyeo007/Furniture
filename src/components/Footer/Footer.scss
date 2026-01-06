@@ -9,8 +9,8 @@
   }
 
   &__logo {
-    width: 160px;      // 로고 비율 맞게 조절
-    height: 24px;
+    width: 224px;      // 로고 비율 맞게 조절
+    height: 22px;
     margin: 0 auto 52px;
 
     a {
@@ -77,6 +77,12 @@
 
 @media (min-width: 768px) {
   .footer {
+
+    &__logo {
+    width: 250px;      // 로고 비율 맞게 조절
+    height: 24px;
+    }
+
     &__connect {
       font-size: 16px;
     }

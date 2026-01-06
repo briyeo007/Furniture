@@ -82,8 +82,7 @@
     display: block;
     width: 48px;
     height: 48px;
-    background: url("/images/arrow.png") center/contain no-repeat;
-    filter: brightness(0);
+    background: url("/images/oh-arrow.png") center/contain no-repeat;
   }
 
   &__dots {
@@ -106,6 +105,10 @@
 
 @media (min-width: 768px) {
   .ourhome {
+    &__img {
+      height: 449px;
+    }
+
     &__title {
       .mobile-br {
         display: none;

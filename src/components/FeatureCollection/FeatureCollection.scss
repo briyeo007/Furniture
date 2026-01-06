@@ -60,6 +60,15 @@
 
 @media (min-width: 768px) {
   .fc {
+    height: 723px;
+     &__inner {
+      padding-top: 51px;
+    }
+
+    &__content {
+      padding: 34px 70px 51px 65px;
+    }
+
     &__title {
       font-size: 60px;
       line-height: 60px;
