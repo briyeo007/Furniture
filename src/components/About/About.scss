@@ -202,3 +202,35 @@
     }
   }
 }
+
+@media (min-width: 1920px) {
+  .about {
+    &__image {
+      &--about {
+        margin-left: 0;
+      }
+
+      &--community {
+        margin-right: 0;
+      }
+    }
+
+    &__box {
+      &--right {
+        width: 752px;
+        height: auto;
+        padding: 41px 5.05% 59px 3.63%;
+      }
+
+      &--left {
+        width: 738px;
+        height: auto;
+        padding: 62px 3.16% 62px 5.16%;
+      }
+    }
+
+    &__desc {
+      line-height: 24px;
+    }
+  }
+}

@@ -85,7 +85,7 @@
 
     &__image {
       height: 465px;
-      
+
     }
 
      &__title {
@@ -107,7 +107,26 @@
     height: 50px;
     margin-bottom: 34px;
   }
-  
+
 
 }
+}
+
+@media (min-width: 1920px) {
+  .careers {
+    &__box {
+      width: 604px;
+      height: auto;
+      padding: 44px 3.42% 49px 7.37%;
+    }
+
+    &__desc {
+      line-height: 24px;
+      margin-bottom: 40px;
+    }
+
+    .careers__btn {
+      margin-bottom: 0;
+    }
+  }
 }

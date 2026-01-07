@@ -197,3 +197,32 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .sbs {
+    &__inner {
+      padding-right: 0;
+    }
+
+    &__title {
+      padding-right: var(--section-padding);
+    }
+
+    &__slide {
+      flex: 0 0 26%;
+      width: 26%;
+
+      &:last-child {
+        margin-right: var(--section-padding);
+      }
+    }
+
+    &__desc {
+      line-height: 24px;
+    }
+
+    &__dots {
+      padding-right: var(--section-padding);
+    }
+  }
+}
+

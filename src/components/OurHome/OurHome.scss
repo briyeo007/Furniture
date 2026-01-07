@@ -56,6 +56,7 @@
 
   &__body {
     padding: 20px 0;
+    padding-left: 20px;
     position: relative;
   }
 
@@ -157,6 +158,32 @@
 
     &__dots {
       padding-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .ourhome {
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &__slider {
+      overflow: visible;
+    }
+
+    &__card {
+      flex: 0 0 calc((100% - 40px) / 3);
+      width: calc((100% - 40px) / 3);
+    }
+
+    &__card-desc {
+      line-height: 24px;
+    }
+
+    &__dots {
+      display: none;
     }
   }
 }

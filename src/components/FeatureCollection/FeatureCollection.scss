@@ -111,8 +111,29 @@
       margin-top: 24px;
       margin-bottom: 30px;
     }
-
   }
+}
 
-   
+@media (min-width: 1920px) {
+  .fc {
+    .fc__inner {
+      padding-right: 344px;
+    }
+
+    &__content {
+      padding: 36px 70px 40px 69px;
+    }
+
+    &__title {
+      font-size: 78px;
+      line-height: 78px;
+    }
+
+    &__sub {
+      font-size: 38px;
+      line-height: 64px;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+  }
 }

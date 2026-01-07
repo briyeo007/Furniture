@@ -115,6 +115,8 @@
 
 @media (min-width: 1024px) {
   .footer {
+
+
     &__logo {
       width: 276px;
       height: 27px;
@@ -128,5 +130,19 @@
      &__social {
     margin-bottom: 40px;
   }
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer {
+    height: 400px;
+
+    &__inner {
+      height: 100%;
+    }
+
+    &__social {
+      margin-bottom: 50px;
+    }
   }
 }
