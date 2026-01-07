@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./OurHome.scss";
 
 const BASE = import.meta.env.BASE_URL;
@@ -27,13 +27,28 @@ export default function OurHome() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      setSlidesPerView(window.innerWidth >= 1024 ? 2 : 1);
+    };
+    updateSlidesPerView();
+    window.addEventListener("resize", updateSlidesPerView);
+    return () => window.removeEventListener("resize", updateSlidesPerView);
+  }, []);
+
+  const totalDots = Math.ceil(DATA.length / slidesPerView);
 
   const onScroll = () => {
     const t = trackRef.current;
     if (!t || !t.children?.length) return;
     const slideW = t.children[0].getBoundingClientRect().width;
-    const idx = Math.round(t.scrollLeft / slideW);
-    setActive(Math.max(0, Math.min(DATA.length - 1, idx)));
+    const gap = 20;
+    const slideWithGap = slideW + gap;
+    const idx = Math.round(t.scrollLeft / slideWithGap);
+    const pageIdx = Math.floor(idx / slidesPerView);
+    setActive(Math.max(0, Math.min(totalDots - 1, pageIdx)));
   };
 
   const handleMouseDown = (e) => {
@@ -98,7 +113,7 @@ export default function OurHome() {
         </div>
 
         <div className="ourhome__dots">
-          {DATA.map((_, i) => (
+          {Array.from({ length: totalDots }, (_, i) => (
             <span key={i} className={`ourhome__dot ${active === i ? "ourhome__dot--active" : ""}`} />
           ))}
         </div>

@@ -8,15 +8,15 @@
     height: 382px;
     background-image: url("/images/career.png");
     background-size: cover;
-    background-position: center;
+    background-position: 69% center;
     background-repeat: no-repeat;
   }
 
   &__box {
     margin: -138px var(--section-padding) 0 -30px;
     width: calc(100% - 32px + 30px);
-    padding: 40px 36px 5px;
-    background: rgba(40, 30, 30, 0.92);
+    padding: 40px 9.23% 43px 8.46%;
+    background: #000000;
     color: #fff;
     position: relative;
     text-align: right;
@@ -51,15 +51,19 @@
     font-size: 17px;
     font-weight: 500;
     text-decoration: none;
-    margin-bottom: 59px;
   }
 }
 
 @media (min-width: 768px) {
   .careers {
+    &__image {
+      background-position: 69% center;
+    }
+
     &__box {
       margin: -170px auto 0 var(--section-padding) !important;
       width: calc(100% - 220px);
+      padding: 47px 7.03% 46px 7.16%;
     }
 
     &__btn {
@@ -76,11 +80,12 @@
       width: calc(100% - 481px);
       bottom: 70px;
       padding-top: 21px;
-      padding: 21px 59px 5px 67px;
+      padding: 41px 5.76% 34px 6.54%;
     }
 
     &__image {
       height: 465px;
+      
     }
 
      &__title {
