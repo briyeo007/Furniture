@@ -207,13 +207,21 @@
       padding-right: var(--section-padding);
     }
 
-    &__slide {
-      flex: 0 0 26%;
-      width: 26%;
+    &__slider {
+      margin-right: calc(-1 * var(--section-padding));
+    }
 
-      &:last-child {
-        margin-right: var(--section-padding);
+    &__track {
+      &::after {
+        content: "";
+        flex-shrink: 0;
+        width: var(--section-padding);
       }
+    }
+
+    &__slide {
+      flex: 0 0 30%;
+      width: 30%;
     }
 
     &__desc {

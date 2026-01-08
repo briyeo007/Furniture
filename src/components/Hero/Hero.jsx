@@ -6,8 +6,8 @@ export default function Hero() {
   const [active, setActive] = useState(0);
 
   const deals = [
-    { title: "WINTER DEALS", desc: "Savings That Sleigh", link: "#" },
     { title: "Extendable Dining Table", desc: "More Guests, More Table", link: "#" },
+    { title: "WINTER DEALS", desc: "Savings That Sleigh", link: "#" },
     { title: "New Arrivals", desc: "See Our Latest Designs", link: "#" },
   ];
 
@@ -33,11 +33,9 @@ export default function Hero() {
     <section className="hero">
       <div className="hero__inner">
         <div className="hero__content">
-          <div className="hero__text">
-            <h2 className="hero__title">Christmas Sales</h2>
-            <p className="hero__sub">~WEEKEND DEALS~</p>
-            <a href="#" className="hero__btn">Start Saving</a>
-          </div>
+          <h2 className="hero__title">Christmas Sales</h2>
+          <p className="hero__sub">~WEEKEND DEALS~</p>
+          <a href="#" className="hero__btn">Start Saving</a>
         </div>
 
         <div className="hero__slider" onWheel={handleWheel}>
@@ -46,7 +44,7 @@ export default function Hero() {
               <div className="hero__card" key={i}>
                 <h3 className="hero__card-title">{d.title}</h3>
                 <strong className="hero__card-desc">{d.desc}</strong>
-                <a className="hero__card-icon" href={d.link}><span className="blind">바로가기</span></a>
+                <a className="hero__card-icon" href={d.link}>→</a>
               </div>
             ))}
           </div>
