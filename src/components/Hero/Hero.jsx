@@ -44,7 +44,7 @@ export default function Hero() {
               <div className="hero__card" key={i}>
                 <h3 className="hero__card-title">{d.title}</h3>
                 <strong className="hero__card-desc">{d.desc}</strong>
-                <a className="hero__card-icon" href={d.link}>→</a>
+                <a className="hero__card-icon" href={d.link} aria-label="Go to deal" />
               </div>
             ))}
           </div>
