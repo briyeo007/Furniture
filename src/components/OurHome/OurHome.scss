@@ -162,7 +162,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   .ourhome {
     &__title {
       font-size: 40px;
@@ -174,8 +174,8 @@
     }
 
     &__card {
-      flex: 0 0 calc((100% - 40px) / 3);
-      width: calc((100% - 40px) / 3);
+      flex: 0 0 496px;
+      width: 496px;
     }
 
     &__card-desc {

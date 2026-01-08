@@ -44,7 +44,7 @@ export default function OurHome() {
     const t = trackRef.current;
     if (!t || !t.children?.length) return;
     const slideW = t.children[0].getBoundingClientRect().width;
-    const gap = 20;
+    const gap = parseFloat(getComputedStyle(t).gap) || 0;
     const slideWithGap = slideW + gap;
     const idx = Math.round(t.scrollLeft / slideWithGap);
     const pageIdx = Math.floor(idx / slidesPerView);

@@ -41,7 +41,7 @@
   &__box {
     width: calc(100% - 32px);
     padding: 40px 24px 5px;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     position: relative;
     margin-top: -60px;
@@ -203,17 +203,17 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   .about {
     &__image {
       &--about {
         margin-left: 0;
-        width: 58%;
+        width: 882px;
       }
 
       &--community {
         margin-right: 0;
-        width: 58%;
+        width: 882px;
       }
     }
 

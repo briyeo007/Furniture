@@ -16,7 +16,7 @@
     margin: -138px var(--section-padding) 0 -30px;
     width: calc(100% - 32px + 30px);
     padding: 40px 9.23% 43px 8.46%;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     position: relative;
     text-align: right;
@@ -112,12 +112,14 @@
 }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   .careers {
     &__box {
       width: 604px;
       height: auto;
       padding: 44px 3.42% 49px 7.37%;
+              bottom: 171px;
+              left: 128px;
     }
 
     &__desc {

@@ -129,6 +129,7 @@
     font-size: 16px;
     margin-bottom: 40px;
     font-weight: 400;
+    white-space: nowrap;
   }
 
   &__card-icon {
@@ -198,7 +199,7 @@
     }
 
     &__track {
-      padding: 0;
+      padding: 0 var(--section-padding);
       overflow: visible;
       scroll-snap-type: none;
       align-items: center;
@@ -274,3 +275,4 @@
   }
 }
 }
+

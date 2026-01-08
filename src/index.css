@@ -27,9 +27,9 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   :root {
-    --section-padding: 10%;
+    --section-padding: calc((100vw - 1520px) / 2);
   }
 }
 
