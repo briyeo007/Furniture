@@ -212,6 +212,7 @@
     }
 
     &__track {
+      width: 73%;
       &::after {
         content: "";
         flex-shrink: 0;
