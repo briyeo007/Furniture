@@ -1,9 +1,11 @@
 import { useRef, useState } from "react";
+import useScrollAnimation from "../../hooks/useScrollAnimation";
 import "./Hero.scss";
 
 export default function Hero() {
   const trackRef = useRef(null);
   const [active, setActive] = useState(0);
+  const [animRef, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const deals = [
     { title: "Extendable Dining Table", desc: "More Guests, More Table", link: "#" },
@@ -30,12 +32,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="hero">
+    <section className="hero" ref={animRef}>
       <div className="hero__inner">
-        <div className="hero__content">
-          <h2 className="hero__title">Christmas Sales</h2>
-          <p className="hero__sub">~WEEKEND DEALS~</p>
-          <a href="#" className="hero__btn">Start Saving</a>
+        <div className={`hero__content ${isVisible ? "visible" : ""}`}>
+          <h2 className={`hero__title anim-text ${isVisible ? "visible" : ""}`}>Christmas Sales</h2>
+          <p className={`hero__sub anim-text delay-1 ${isVisible ? "visible" : ""}`}>~WEEKEND DEALS~</p>
+          <a href="#" className={`hero__btn anim-text delay-2 ${isVisible ? "visible" : ""}`}>Start Saving</a>
         </div>
 
         <div className="hero__slider" onWheel={handleWheel}>

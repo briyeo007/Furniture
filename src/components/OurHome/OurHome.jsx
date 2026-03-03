@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import useScrollAnimation from "../../hooks/useScrollAnimation";
 import "./OurHome.scss";
 
 const BASE = import.meta.env.BASE_URL;
@@ -28,6 +29,7 @@ export default function OurHome() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
+  const [animRef, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   useEffect(() => {
     const updateSlidesPerView = () => {
@@ -81,9 +83,9 @@ export default function OurHome() {
   };
 
   return (
-    <section className="ourhome">
+    <section className="ourhome" ref={animRef}>
       <div className="ourhome__inner">
-        <h2 className="ourhome__title">Our home <br className="mobile-br" />with Living spaces</h2>
+        <h2 className={`ourhome__title anim-text ${isVisible ? "visible" : ""}`}>Our home <br className="mobile-br" />with Living spaces</h2>
 
         <div className="ourhome__track">
           <div

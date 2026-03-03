@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import useScrollAnimation from "../../hooks/useScrollAnimation";
 import "./ShopByStyle.scss";
 
 const slides = [
@@ -30,6 +31,7 @@ export default function ShopByStyle() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [animRef, isVisible] = useScrollAnimation({ threshold: 0.2 });
 
   const onScroll = () => {
     const t = trackRef.current;
@@ -69,9 +71,9 @@ export default function ShopByStyle() {
   };
 
   return (
-    <section className="sbs">
+    <section className="sbs" ref={animRef}>
       <div className="sbs__inner">
-        <h2 className="sbs__title">Shop By Style</h2>
+        <h2 className={`sbs__title anim-text ${isVisible ? "visible" : ""}`}>Shop By Style</h2>
 
         <div
           className="sbs__slider"
